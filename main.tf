@@ -19,7 +19,7 @@ data "cloudflare_zones" "domain" {
 resource "cloudflare_record" "site_cname" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
   name    = var.site_domain
-  value   = test.site.website_endpoint
+  value   = test.var.site_domain
   type    = "CNAME"
 
   ttl     = 1
