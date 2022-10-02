@@ -32,7 +32,7 @@ variable "domain" {
 resource "cloudflare_record" "www" {
   zone_id = var.zone_id
   name    = "testcicd"
-  value   = "203.1.113.111"
+  value   = "203.1.113.11"
   type    = "A"
   proxied = true
 }
