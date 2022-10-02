@@ -19,28 +19,18 @@ terraform {
 
 provider "cloudflare" {}
 
-data "cloudflare_zones" "domain" {
-  filter {
-    name = var.site_domain
-  }
+variable "zone_id" {
+  default = "93be47cd9bf8560c9826cb1c012afbfa"
 }
 
-resource "cloudflare_record" "site_cname" {
-  zone_id = data.cloudflare_zones.domain.zones[0].id
-  name    = var.site_domain
-  value   = test.site.website_endpoint
-  type    = "CNAME"
-
-  ttl     = 1
-  proxied = true
+variable "domain" {
+  default = "megabank.net"
 }
 
 resource "cloudflare_record" "www" {
-  zone_id = data.cloudflare_zones.domain.zones[0].id
-  name    = "www"
-  value   = var.site_domain
-  type    = "CNAME"
-
-  ttl     = 1
+  zone_id = var.zone_id
+  name    = "testcicd"
+  value   = "203.1.113.111"
+  type    = "A"
   proxied = true
 }
