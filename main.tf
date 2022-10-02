@@ -21,14 +21,6 @@ provider "cloudflare" {
   api_token = var.CLOUDFLARE_API_TOKEN
 }
 
-#variable "zone_id" {
-#  default = "93be47cd9bf8560c9826cb1c012afbfa"
-#}
-
-#variable "domain" {
-#  default = "megabank.net"
-#}
-
 resource "cloudflare_record" "testcicd4" {
   zone_id = var.CF_ZONE_ID_MGB_NET
   name    = "testcicd4"
