@@ -9,6 +9,12 @@ variable "site_domain" {
   description = "The domain name to use for the static site"
 }
 
+variable "CF_API_TOKEN" {
+  type        = string
+  description = "Cloudflare API token"
+  default     = ""
+}
+
 #variable "CF_API_TOKEN" {
 #  description = "Cloudflare API token"
 #  type = string
