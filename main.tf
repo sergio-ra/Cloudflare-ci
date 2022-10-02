@@ -21,17 +21,17 @@ provider "cloudflare" {
   api_token = var.CLOUDFLARE_API_TOKEN
 }
 
-variable "zone_id" {
-  default = "93be47cd9bf8560c9826cb1c012afbfa"
-}
+#variable "zone_id" {
+#  default = "93be47cd9bf8560c9826cb1c012afbfa"
+#}
 
 #variable "domain" {
 #  default = "megabank.net"
 #}
 
-resource "cloudflare_record" "www" {
-  zone_id = var.zone_id
-  name    = "testcicd"
+resource "cloudflare_record" "testcicd4" {
+  zone_id = var.CF_ZONE_ID_MGB_NET
+  name    = "testcicd4"
   value   = "203.12.13.111"
   type    = "A"
   proxied = true
