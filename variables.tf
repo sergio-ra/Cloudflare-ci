@@ -9,3 +9,9 @@ variable "cloudflare_api_token" {
   description = "Cloudflare API token"
   default     = ""
 }
+
+variable "cloudflare_api_key" {
+  type        = string
+  description = "Cloudflare API token"
+  default     = ""
+}
