@@ -17,6 +17,10 @@ terraform {
   }
 }
 
+provider "cloudflare" {
+  api_token = var.CLOUDFLARE_API_TOKEN
+}
+
 variable "zone_id" {
   default = "93be47cd9bf8560c9826cb1c012afbfa"
 }
