@@ -1,4 +1,4 @@
-variable "CF_API_TOKEN" {
+variable "CLOUDFLARE_API_TOKEN" {
   type        = string
   description = "Cloudflare API token"
   default     = ""
