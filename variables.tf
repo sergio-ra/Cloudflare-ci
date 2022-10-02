@@ -4,14 +4,8 @@ variable "CLOUDFLARE_API_TOKEN" {
   default     = ""
 }
 
-variable "cloudflare_api_token" {
+variable "CF_ZONE_ID_MGB_NET" {
   type        = string
-  description = "Cloudflare API token"
-  default     = ""
-}
-
-variable "CLOUDFLARE_API_KEY" {
-  type        = string
-  description = "Cloudflare API key"
+  description = "Cloudflare ID Zone"
   default     = ""
 }
