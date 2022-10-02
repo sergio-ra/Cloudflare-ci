@@ -21,7 +21,7 @@ provider "cloudflare" {
   api_token = var.CLOUDFLARE_API_TOKEN
 }
 
-resource "cloudflare_record" "testcicd4" {
+resource "cloudflare_record" "testcicd4_MGB_NET" {
   zone_id = var.CF_ZONE_ID_MGB_NET
   name    = "testcicd4"
   value   = "203.12.13.111"
