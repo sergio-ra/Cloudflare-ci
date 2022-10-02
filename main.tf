@@ -18,7 +18,7 @@ terraform {
 }
 
 provider "cloudflare" {
-  api_token = var.cloudflare_api_token
+  api_key = var.cloudflare_api_key
 }
 
 variable "zone_id" {
